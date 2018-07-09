@@ -1,0 +1,87 @@
+<!doctype html>
+
+<html>
+
+    <head>
+
+        
+    <title>Curso Javascript Completo 2018</title>
+
+    <meta charset="utf-8">
+
+    <script>
+
+        // Criar uma função que retorne o índice de massa corporal (IMC)
+        // Criar outra função que receba este índice retorne uma string indicando sua classificação
+           
+       
+
+                var meuPeso = parseInt(prompt('Digite o seu peso'))
+
+                alert('Você informou que possui ' + meuPeso + ' quilos!')
+
+                var minhaAltura = parseFloat(prompt('Digite a sua altura'))
+
+                alert('Você informou possuir ' + minhaAltura + 'm de altura')
+
+                var imc = 0;
+
+        
+                function calcularIMC(peso, altura) {
+
+                    return imc = meuPeso * (minhaAltura / 2);
+
+                    } 
+
+                    function calcularCategoria (pessoa) {
+
+                        if(imc < 50) {
+
+                           document.write('<b>Seu índice de massa corporal é ' + imc + ' e você está com o pé na cova!</b>')
+
+                        } else if(imc <= 75) {
+
+                           document.write('<b>Seu índice de massa corporal é ' + imc + ' e você está quase lá!!!</b>')
+
+                        } else if(imc > 75) {
+
+                            document.write('<b>Seu índice de massa corporal é ' + imc + ' e você vai morrerrrr!!!</b>')
+
+                        }
+
+                    }
+
+                   
+                var roberto = calcularCategoria(calcularIMC(meuPeso, minhaAltura))
+
+                // var categoria = calcularCategoria(roberto)
+
+                   
+    
+    </script>
+
+    </head>
+
+    <body>
+
+        <h1>Curso Javascript Completo 2015</h1>
+
+    </body>
+
+    </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
