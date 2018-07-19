@@ -9,7 +9,7 @@ const menorSalario = (func, funcAtual) => {
 
 axios.get(url).then(response => {
     const funcionarios = response.data
-    console.log(funcionais)
+    console.log(funcionarios)
     // Mulher chinesa com o menor salário?
 
     const func = funcionarios
