@@ -1,5 +1,5 @@
 // middleware pattern (chain of responsability)
-const passo1 = (ctx, next) => { teste
+const passo1 = (ctx, next) => {
     ctx.valor1 = 'mid1'
     next()
 }
