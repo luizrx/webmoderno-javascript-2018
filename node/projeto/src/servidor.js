@@ -4,8 +4,26 @@ const express = require('express')
 const app = express()
 const bancoDeDados = require('./bancoDeDados')
 
+// app.get('/produtos', (req, res, next) => {
+//     console.log('Middleware 1...')
+//     next()
+   
+// })
 
-app.use('/produtos', (req, res, next) => {
+// app.get('/produtos', (req, res, next) => {
+//     res.send({
+//         nome: 'Notebook',
+//         preco: 1234.50
+//     })
+// })
+
+// app.listen(porta, () => {
+//     console.log(`Servidor executando na porta ${porta}.`)
+// })
+
+
+
+app.get('/produtos', (req, res, next) => {
     res.send(bancoDeDados.getProdutos())
 })
 
@@ -22,5 +40,5 @@ app.post('/produtos', (req, res, next) => {
 })
 
 app.listen(porta, () => {
-    console.log(`Servidor está executando na porta ${porta}`)
+    console.log(`Servidor está excutando na porta ${porta}`)
 })
