@@ -2,12 +2,13 @@ const porta = 3003
 
 const express = require('express')
 const app = express()
+const bodyParseer = require('body-parser')
 const bancoDeDados = require('./bancoDeDados')
 
 // app.get('/produtos', (req, res, next) => {
 //     console.log('Middleware 1...')
 //     next()
-   
+
 // })
 
 // app.get('/produtos', (req, res, next) => {
@@ -21,7 +22,7 @@ const bancoDeDados = require('./bancoDeDados')
 //     console.log(`Servidor executando na porta ${porta}.`)
 // })
 
-
+app.use( bodyParseer.urlencoded({ extended: true }))
 
 app.get('/produtos', (req, res, next) => {
     res.send(bancoDeDados.getProdutos())
@@ -33,12 +34,26 @@ app.get('/produtos/:id', (req, res, next) => {
 
 app.post('/produtos', (req, res, next) => {
     const produto = bancoDeDados.salvarProduto({
-        nome: req.body.name,
+        produto: req.body.produto,
         preco: req.body.preco
     })
-    res.send(produto)
+    res.send(produto) //JSON
+})
+
+app.put('/produtos/:id', (req, res, next) => {
+    const produto = bancoDeDados.salvarProduto({
+        id: req.params.id,
+        produto: req.body.produto,
+        preco: req.body.preco
+    })
+    res.send(produto) //JSON
+})
+
+app.delete('/produtos/:id', (req, res, next) => {
+    const produto = bancoDeDados.excluirProduto(req.params.id)
+    res.send(produto) //JSON
 })
 
 app.listen(porta, () => {
-    console.log(`Servidor está excutando na porta ${porta}`)
+    console.log(`Servidor está executrando na porta ${porta}`)
 })
