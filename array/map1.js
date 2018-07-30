@@ -20,6 +20,7 @@ console.log(teste)
 
 pot5 = num => num * 50
 
+
 divide10 = num => num / 10
 
 paraDinheiro = num => `R$ ${parseFloat(num).toFixed(2).replace('.',',')}`

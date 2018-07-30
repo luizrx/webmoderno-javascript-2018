@@ -20,10 +20,11 @@ console.log(sapopemba)
 console.log( caralho)
 
 const {sobrenome, sapato = 'chicana'} = pessoa
-console.log(sobrenome, sapato)
+console.log('sobrenome: ', sobrenome, sapato) // sobrenome: retornará undefined
 
 const{endereco: {logradouro, numero, cep = true}} = pessoa
 console.log(logradouro, numero, cep)
 
 const { conta: { ag, num } } = pessoa
 console.log(ag,num) // erro, já que estamos tentando acessar um atributo que não existe na constante
+
