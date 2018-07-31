@@ -1,0 +1,56 @@
+<!doctype html>
+
+<html>
+
+<head>
+
+
+    <title>Curso Javascript Completo 2018</title>
+
+    <meta charset="utf-8">
+
+    <script>
+
+        function mudarCor(cor) {
+            this.color = cor || 'cinza';
+        }
+
+        function veiculo(modelo, color) {
+
+            var color = color || 'black';
+
+            this.modelo = modelo || 'ford';
+
+            this.mudacor = mudarCor
+
+            this.pegaCor = function () {
+                return 'A nova cor do veículo é ' + this.color
+
+            }
+
+        }
+
+
+        console.log(veiculo)
+
+        var volkswagen = new veiculo('golf', 'red')
+
+        console.log(volkswagen)
+
+        volkswagen.mudacor()
+
+        console.log(volkswagen)
+
+        console.log(volkswagen.pegaCor())
+
+    </script>
+
+</head>
+
+<body>
+
+    <h1>Curso Javascript Completo 2018</h1>
+
+</body>
+
+</html>

@@ -52,6 +52,3 @@ console.log('Valor: ', valor)
 
 // for(let assunto of assuntosMap.values()) {
 //     console.log(assunto)
-// }
-
-const arrai

@@ -2,86 +2,55 @@
 
 <html>
 
-    <head>
+<head>
 
-        
+
     <title>Curso Javascript Completo 2018</title>
 
     <meta charset="utf-8">
 
     <script>
 
-        // Criar uma função que retorne o índice de massa corporal (IMC)
-        // Criar outra função que receba este índice retorne uma string indicando sua classificação
-           
-       
+        function mudarCor(cor) {
+            this.color = cor || 'cinza';
+        }
 
-                var meuPeso = parseInt(prompt('Digite o seu peso'))
+        function veiculo(modelo, color) {
 
-                alert('Você informou que possui ' + meuPeso + ' quilos!')
+            var color = color || 'black';
 
-                var minhaAltura = parseFloat(prompt('Digite a sua altura'))
+            this.modelo = modelo || 'ford';
 
-                alert('Você informou possuir ' + minhaAltura + 'm de altura')
+            this.mudacor = mudarCor
 
-                var imc = 0;
+            this.pegaCor = function () {
+                return 'A nova cor do veículo é ' + this.color
 
-        
-                function calcularIMC(peso, altura) {
+            }
 
-                    return imc = meuPeso * (minhaAltura / 2);
+        }
 
-                    } 
 
-                    function calcularCategoria (pessoa) {
+        console.log(veiculo)
 
-                        if(imc < 50) {
+        var volkswagen = new veiculo('golf', 'red')
 
-                           document.write('<b>Seu índice de massa corporal é ' + imc + ' e você está com o pé na cova!</b>')
+        console.log(volkswagen)
 
-                        } else if(imc <= 75) {
+        volkswagen.mudacor()
 
-                           document.write('<b>Seu índice de massa corporal é ' + imc + ' e você está quase lá!!!</b>')
+        console.log(volkswagen)
 
-                        } else if(imc > 75) {
+        console.log(volkswagen.pegaCor())
 
-                            document.write('<b>Seu índice de massa corporal é ' + imc + ' e você vai morrerrrr!!!</b>')
-
-                        }
-
-                    }
-
-                   
-                var roberto = calcularCategoria(calcularIMC(meuPeso, minhaAltura))
-
-                // var categoria = calcularCategoria(roberto)
-
-                   
-    
     </script>
 
-    </head>
+</head>
 
-    <body>
+<body>
 
-        <h1>Curso Javascript Completo 2015</h1>
+    <h1>Curso Javascript Completo 2018</h1>
 
-    </body>
+</body>
 
-    </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</html>
